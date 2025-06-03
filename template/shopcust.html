@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+
+<head>
+
+
+<body>
+    {% block container %}
+    <table border="1" align="center" style=" background: #ccc8b0; text-align: center; width: 100%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 31px 5px rgba(0,0,0,0.57); margin-bottom: 50px; margin-top: 50px;" >
+        <tr style="text-align: center; font-weight: bold; ">
+            <td>Name</td>
+            <td>Details</td>
+            <td>Price</td>
+            <td>Image</td>
+            <td>Bidding</td>
+            <td>Time Left</td>
+            <td>Bidder</td>
+        </tr>
+        {% for s in slist %}
+        <tr>
+            <td>{{ s.sname }}</td>
+            <td>{{ s.sdetails }}</td>
+            <td>{{ s.sprice }}</td>
+            <td><img src="/{{ s.skin_image }}" height="100" width="150"></td>
+
+            <td>
+                {% if s.bid_end_time > current_time %}
+                <form action="{% url 'place_bid' s.sid %}" method="POST">
+                    {% csrf_token %}
+                    <input type="number" name="bid_amount" step="0.01" required>
+                    <button type="submit">Place Bid</button>
+                </form>
+                <p>Highest Bid: {{ s.highest_bid }}</p>
+                {% else %}
+                <p>Bidding Closed</p>
+                {% endif %}
+            </td>
+                
+            <td id="timer-{{ s.sid }}" data-endtime="{{ s.bid_end_time|date:'U' }}"></td> <!-- Timer Cell -->
+
+            <td>
+                {% if s.highest_bidder %}
+                <span>Highest Bidder: {{ s.highest_bidder.cname }}</span>
+                {% else %}
+                <span>Not highest bidder</span>
+                {% endif %}
+            </td>
+
+        </tr>
+        {% endfor %}
+    </table>
+    {% endblock container %}
+</body>

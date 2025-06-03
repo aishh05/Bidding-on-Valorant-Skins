@@ -1,0 +1,44 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block container %}
+    <div class="container">
+        <div class="login-container" style="max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            color: black;
+            background: #ccc8b0;
+             border-radius: 10px;
+            box-shadow: 4px 4px 15px black;">
+            
+            <form action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                <p style="color: #5E0F27 ; text-align: center; font-weight: bold;">Login</p>
+                <table style="width: 100%;">
+                    <tr>
+                        <td><label for="email" class="form-label">Email</label></td>
+                        <td>
+                            <input type="email" name="email" class="form-control" id="email" 
+                            placeholder="Enter your email" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="password" class="form-label">Password</label></td>
+                        <td>
+                            <input type="password" name="password" class="form-control" id="password" 
+                            placeholder="Enter your password" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" class="btn btn-primary" style="margin-top: 20px;" value="Login">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <p class="text-center mt-3">
+                Don't have an account? 
+                <a href="{% url 'addcustomer' %}"><b>Sign up</b></a>
+            </p>
+        </div>
+    </div>
+{% endblock container %}

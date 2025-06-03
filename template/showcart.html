@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% block container %}
+
+<body>
+    <h3 style="text-align: center; margin-top: 50px; text-decoration: underline;">Cart</h3>
+    
+    <table border="2" style="background: #ccc8b0; text-align: center; width: 80%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 31px 5px rgba(0,0,0,0.57); margin-bottom: 50px; margin-top: 50px;">
+        <tr style="text-align: center;">
+            <th>ID</th>
+            <th>Skin Name</th>
+            <th>Highest Bid</th>
+        </tr>
+        {% for c in data %}
+        <tr>
+            <td>{{ c.id }}</td>
+            <td>{{ c.cartid.sname }}</td>
+            <td>{{ c.cartid.highest_bid }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div style="text-align: center; margin-top: 30px;">
+        <h4>Total Amount: ₹{{ totalprice }}</h4>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px; margin-bottom: 30px;">
+        <a href="{% url 'placeorder' %}" style="padding: 10px 20px; background-color: #dc3545; color: white; text-decoration: none; border-radius: 5px; font-size: 16px;">Place Order</a>
+    </div>
+
+{% endblock container %}

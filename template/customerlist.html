@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+<body>
+    {%block container%}
+    <table border="1" style=" background: #ccc8b0; text-align: center; width: 60%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 31px 5px rgba(0,0,0,0.57); margin-bottom: 50px; margin-top: 50px;">
+        <tr style="text-align: center;">
+            <td>Name</td>
+            <td>Contact No</td>
+            <td>Email</td>
+            <th>Password</th>
+            <th colspan="2">action</th>
+        </tr>
+        {%for c in clist%}
+        <tr>
+            <td>{{c.cname}}</td>
+            <td>{{c.c_contactno}}</td>
+            <td>{{c.cemailid}}</td>
+            <td>{{c.cpassword}}</td>
+            <td><a href="{% url 'edit' c.cemailid%}">Edit</td>
+            <td><a href="{% url 'delete' c.cemailid%}">Delete</td>
+        </tr>
+        {%endfor%}
+    </table>
+    {% endblock container%}
+</body>
+
+</html>

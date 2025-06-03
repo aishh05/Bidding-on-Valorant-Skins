@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block container %}
+
+<body>
+    <h3 style="text-align: center; margin-top: 50px; text-decoration: underline;">Bids</h3>
+
+    <table style="background: #ccc8b0; width: 50%; margin: auto; border-collapse: collapse; margin-top: 50px; box-shadow: 0px 0px 31px 5px rgba(0,0,0,0.57); margin-bottom: 50px;">
+
+        <thead>
+            <tr style="background-color: #b0a890;  text-align: center;">
+                <th style="border: 1px solid black; padding: 10px;">Bidder Name</th>
+                <th style="border: 1px solid black; padding: 10px; ">Status</th>
+            </tr>
+        </thead>
+
+       
+            {% for b in all_bids %}
+            <tr>
+                <td style="border: 1px solid black; padding: 10px;  text-align: center;" >{{ b.customer.cname }}</td>
+
+                <td style="border: 1px solid black; padding: 10px; text-align: center;">
+                    {% if b.skin.highest_bidder %}
+                        {% if b.customer.cemailid == b.skin.highest_bidder.cemailid %}
+                            <span style="color: green; font-weight: bold;">Won</span>
+                        {% else %}
+                            <span style="color: red; font-weight: bold;">Lost</span>
+                        {% endif %}
+                    {% else %}
+                        <span>No highest bidder yet</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+     
+
+    </table>
+</body>
+
+{% endblock container %}

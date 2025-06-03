@@ -1,0 +1,356 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block container %}
+
+<section class="position-relative mt-4">
+  <div class="container-lg" style="margin-top: 50px;">
+    <div class="swiper main-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="card d-flex flex-row align-items-end border-0 large jarallax-keep-img"
+            style="transform:translateY(180px);">
+            <img src="{% static 'images/crimson-beast-skin-bundle.webp'%}" alt="shoes" class="img-fluid jarallax-img">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="row g-4">
+            <div class="col-lg-12 mb-4">
+              <div class="card d-flex flex-row align-items-end border-0 jarallax-keep-img">
+                <img src="{% static 'images/Protocol_Bundle_1920x1080-3.jpg.jpeg'%}" alt="shoes"
+                  class="img-fluid jarallax-img">
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="card d-flex flex-row align-items-end border-0 jarallax-keep-img">
+                <img src="{% static 'images/Valorant_Oni_2_Skins_2.jpg'%}" alt="shoes" class="img-fluid jarallax-img">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card d-flex flex-row align-items-end border-0 large jarallax-keep-img"
+            style="transform:translateY(180px);">
+            <img src="{% static 'images/Valorant_Soulstrife_Skin_Bundle.webp'%}" alt="shoes"
+              class="img-fluid jarallax-img">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="row g-4">
+            <div class="col-lg-12 mb-4">
+              <div class="card d-flex flex-row align-items-end border-0 jarallax-keep-img">
+                <img src="{% static 'images/Valorant-Megapunk-skin-bundle.avif'%}" alt="shoes"
+                  class="img-fluid jarallax-img">
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="card d-flex flex-row align-items-end border-0 jarallax-keep-img">
+                <img src="{% static 'images/luna-bundle.webp'%}" alt="shoes" class="img-fluid jarallax-img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<div id="intro" class="swiper-pagination"
+  style="position: absolute; bottom: -390px !important; left: 50%; transform: translateX(-50%);"></div>
+
+<section class="py-2 my-2 py-md-5 my-md-5">
+  <div class="container">
+    <div class="position-relative p-5">
+      <div class="row justify-content-center align-items-center text-center">
+        <marquee behavior="scroll" direction="left" scrollamount="10" loop="infinite"
+          style="font-weight: bold; background-color: #ccc8b0; color: rgb(94, 15, 39); padding: 15px; border-radius: 5px; height: 80px; line-height: 50px; text-align: center; box-shadow: 10px 10  px 15px rgb(94, 15, 39); width: 100%;">
+          <span style="margin-right: 100px;">Bidding on Vandal and Phantom skins</span>
+          <span style="margin-right: 100px;">Bidding on Vandal and Phantom skins</span>
+          <span style="margin-right: 100px;">Bidding on Vandal and Phantom skins</span>
+        </marquee>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="featured-products" class="product-store">
+  <div class="container-md">
+    <div class="display-header d-flex align-items-center justify-content-between">
+      <h2 class="section-title text-uppercase" style="color: rgb(94, 15, 39); text-shadow: 2px 2px 4px rgba(255, 249, 203, 1);
+">Vandal</h2>
+    </div>
+    <div class="product-content padding-small">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
+        <div class="col mb-4">
+          <div class="product-card position-relative">
+            <div class="card-img" style="border-radius: 20cm;">
+              <img src="{% static 'images/valoskin1.jpg'%}" style="height: 133px; width: 330px; box-shadow: 12px 12px 15px black; border-radius: 10px 10px 10px 10px;" alt="product-item"
+                class="product-image img-fluid">
+              <!-- cart-concern -->
+            </div>
+            <div class="card-detail d-flex justify-content-between align-items-center mt-3">
+              <h3 class="card-title fs-6 fw-normal m-0" style="color:#FFF9CB ;">Sentinels of Light
+              </h3>
+              <span class="card-price fw-bold" style="color: rgb(94, 15, 39);text-shadow: 2px 2px 4px rgba(255, 249, 203, 1);
+              ">$99</span>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="product-card position-relative">
+            <div class="card-img">
+              <img src="{% static 'images/Reaver_vandal.jpeg'%}" style="height: 133px; width: 330px; box-shadow: 12px 12px 15px black;  border-radius: 10px 10px 10px 10px;" alt="product-item"
+                class="product-image img-fluid">
+              <!-- cart-concern -->
+            </div>
+            <div class="card-detail d-flex justify-content-between align-items-center mt-3">
+              <h3 class="card-title fs-6 fw-normal m-0" style="color:#FFF9CB ;">Reaver
+              </h3>
+              <span class="card-price fw-bold" style="color: rgb(94, 15, 39);text-shadow: 2px 2px 4px rgba(255, 249, 203, 1);
+              ">$99</span>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="product-card position-relative">
+            <div class="card-img">
+              <img src="{% static 'images/Evori_Dreamwings_Vandal.jpeg'%}" style="height: 133px; width: 330px; box-shadow: 12px 12px 15px black;"
+                alt="product-item" class="product-image img-fluid">
+              <!-- cart-concern -->
+            </div>
+            <div class="card-detail d-flex justify-content-between align-items-center mt-3">
+              <h3 class="card-title fs-6 fw-normal m-0" style="color:#FFF9CB ;">Evori Dreamwings
+              </h3>
+              <span class="card-price fw-bold" style="color: rgb(94, 15, 39);text-shadow: 2px 2px 4px rgba(255, 249, 203, 1);
+              ">$99</span>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="product-card position-relative">
+            <div class="card-img">
+              <img src="{% static 'images/amenodir_vandal.jpg'%}" style="height: 133px; width: 330px; box-shadow: 12px 12px 15px black;border-radius: 10px 10px 10px 10px;"
+                alt="product-item" class="product-image img-fluid">
+              <!-- cart-concern -->
+            </div>
+            <div class="card-detail d-flex justify-content-between align-items-center mt-3">
+              <h3 class="card-title fs-6 fw-normal m-0" style="color:#FFF9CB ;">Amenodir
+              </h3>
+              <span class="card-price fw-bold" style="color: rgb(94, 15, 39);text-shadow: 2px 2px 4px rgba(255, 249, 203, 1);
+              ">$99</span>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="product-card position-relative">
+            <div class="card-img">
+              <img src="{% static 'images/oni-vandal.avif'%}" style="height: 133px; width: 330px; box-shadow: 12px 12px 15px black;border-radius: 10px 10px 10px 10px;" alt="product-item"
+                class="product-image img-fluid">
+              <!-- cart-concern -->
+            </div>
+            <div class="card-detail d-flex justify-content-between align-items-center mt-3">
+              <h3 class="card-title fs-6 fw-normal m-0" style="color:#FFF9CB ;">Oni Vandal
+              </h3>
+              <span class="card-price fw-bold" style="color: rgb(94, 15, 39);text-shadow: 2px 2px 4px rgba(255, 249, 203, 1);
+              ">$99</span>
+            </div>
+          </div>
+        </div>
+</section>
+
+<section id="featured-products" class="product-store">
+  <div class="container-md">
+    <div class="display-header d-flex align-items-center justify-content-between">
+      <h2 class="section-title text-uppercase" style="color: rgb(94, 15, 39); text-shadow: 2px 2px 4px rgba(255, 249, 203, 1);
+">Phantom</h2>
+    </div>
+    <div class="product-content padding-small">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
+        <div class="col mb-4">
+          <div class="product-card position-relative">
+            <div class="card-img">
+              <img src="{% static 'images/glithpop-phantom.webp'%}" style="height: 133px; width: 330px; box-shadow: 12px 12px 15px black;border-radius: 10px 10px 10px 10px;"
+                alt="product-item" class="product-image img-fluid">
+              <!-- cart-concern -->
+            </div>
+            <div class="card-detail d-flex justify-content-between align-items-center mt-3">
+              <h3 class="card-title fs-6 fw-normal m-0" style="color:#FFF9CB ;">Glithpop
+              </h3>
+              <span class="card-price fw-bold" style="color: rgb(94, 15, 39);text-shadow: 2px 2px 4px rgba(255, 249, 203, 1);
+              ">$99</span>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="product-card position-relative">
+            <div class="card-img">
+              <img src="{% static 'images/protocol-phantom.jpg'%}" style="height: 133px; width: 330px; box-shadow: 12px 12px 15px black;border-radius: 10px 10px 10px 10px;"
+                alt="product-item" class="product-image img-fluid">
+              <!-- cart-concern -->
+            </div>
+            <div class="card-detail d-flex justify-content-between align-items-center mt-3">
+              <h3 class="card-title fs-6 fw-normal m-0" style="color:#FFF9CB ;">Protocol
+              </h3>
+              <span class="card-price fw-bold" style="color: rgb(94, 15, 39);text-shadow: 2px 2px 4px rgba(255, 249, 203, 1);
+              ">$99</span>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="product-card position-relative">
+            <div class="card-img">
+              <img src="{% static 'images/Spectrum_Phantom-1.webp'%}" style="height: 133px; width: 330px; box-shadow: 12px 12px 15px black;border-radius: 10px 10px 10px 10px;"
+                alt="product-item" class="product-image img-fluid">
+              <!-- cart-concern -->
+            </div>
+            <div class="card-detail d-flex justify-content-between align-items-center mt-3">
+              <h3 class="card-title fs-6 fw-normal m-0" style="color:#FFF9CB ;">Spectrum
+              </h3>
+              <span class="card-price fw-bold" style="color: rgb(94, 15, 39);text-shadow: 2px 2px 4px rgba(255, 249, 203, 1);
+              ">$99</span>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="product-card position-relative">
+            <div class="card-img">
+              <img src="{% static 'images/mystbloom-phantom-valorant.webp'%}" style="height: 133px; width: 330px;box-shadow: 12px 12px 15px black;border-radius: 10px 10px 10px 10px;"
+                alt="product-item" class="product-image img-fluid">
+              <!-- cart-concern -->
+            </div>
+            <div class="card-detail d-flex justify-content-between align-items-center mt-3">
+              <h3 class="card-title fs-6 fw-normal m-0" style="color:#FFF9CB ;">Mystbloom
+              </h3>
+              <span class="card-price fw-bold" style="color: rgb(94, 15, 39);text-shadow: 2px 2px 4px rgba(255, 249, 203, 1);
+              ">$99</span>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="product-card position-relative">
+            <div class="card-img">
+              <img src="{% static 'images/Ruination-phantom.webp'%}" style="height: 133px; width: 330px; box-shadow: 12px 12px 15px black;border-radius: 10px 10px 10px 10px;"
+                alt="product-item" class="product-image img-fluid">
+              <!-- cart-concern -->
+            </div>
+            <div class="card-detail d-flex justify-content-between align-items-center mt-3">
+              <h3 class="card-title fs-6 fw-normal m-0" style="color:#FFF9CB ;">Ruination
+              </h3>
+              <span class="card-price fw-bold" style="color: rgb(94, 15, 39);text-shadow: 2px 2px 4px rgba(255, 249, 203, 1);
+              ">$99</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="collection-products" class="py-2 my-2 py-md-5 my-md-5">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 mb-4">
+        <div class="collection-card card border-0 d-flex flex-row align-items-end jarallax-keep-img"
+          style="transform:translateY(-60px);">
+          <img src="{% static 'images/Valorant-Megapunk-skin-bundle.avif'%}" alt="product-item"
+            class="border-rounded-10 img-fluid jarallax-img">
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="collection-card card border-0 d-flex flex-row jarallax-keep-img">
+          <img src="{% static 'images/luna-bundle.webp'%}" alt="product-item"
+            class="border-rounded-10 img-fluid jarallax-img">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="latest-products" class="product-store py-2 my-2 py-md-5 my-md-5 pt-0">
+  <div class="container-md">
+    <div class="display-header d-flex align-items-center justify-content-between">
+      <h2 class="section-title text-uppercase" style="color: rgb(94, 15, 39);text-shadow: 2px 2px 4px rgba(255, 249, 203, 1);
+">Knife</h2>
+    </div>
+
+    <div class="product-content padding-small">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
+        <div class="col mb-4 mb-3">
+          <div class="product-card position-relative">
+            <div class="card-img">
+              <img src="{% static 'images/reaver-karambit-1024x588.webp'%}" alt="product-item" class="product-image img-fluid" style="height: 133px; width: 330px; box-shadow: 12px 12px 15px black;border-radius: 10px 10px 10px 10px;">
+
+            </div>
+            <div class="card-detail d-flex justify-content-between align-items-center mt-3">
+              <h3 class="card-title fs-6 fw-normal m-0" style="color:#FFF9CB ;">Running shoes for men
+              </h3>
+              <span class="card-price fw-bold" style="color: rgb(94, 15, 39);text-shadow: 2px 2px 4px rgba(255, 249, 203, 1);
+              ">$99</span>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4 mb-3">
+          <div class="product-card position-relative">
+            <div class="card-img">
+              <img src="{% static 'images/Singularity-Butterfly-Knife.webp'%}" alt="product-item" class="product-image img-fluid" style="height: 133px; width: 330px; box-shadow: 12px 12px 15px black;border-radius: 10px 10px 10px 10px;">
+
+            </div>
+            <div class="card-detail d-flex justify-content-between align-items-center mt-3">
+              <h3 class="card-title fs-6 fw-normal m-0" style="color:#FFF9CB ;">Running shoes for men
+              </h3>
+              <span class="card-price fw-bold" style="color: rgb(94, 15, 39);text-shadow: 2px 2px 4px rgba(255, 249, 203, 1);
+              ">$99</span>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4 mb-3">
+          <div class="product-card position-relative">
+            <div class="card-img">
+              <img src="{% static 'images/champion_knife.jpeg'%}" alt="product-item" class="product-image img-fluid" style="height: 133px; width: 330px; box-shadow: 12px 12px 15px black;border-radius: 10px 10px 10px 10px;">
+
+            </div>
+            <div class="card-detail d-flex justify-content-between align-items-center mt-3">
+              <h3 class="card-title fs-6 fw-normal m-0" style="color:#FFF9CB ;">Running shoes for men
+              </h3>
+              <span class="card-price fw-bold" style="color: rgb(94, 15, 39);text-shadow: 2px 2px 4px rgba(255, 249, 203, 1);
+              ">$99</span>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4 mb-3">
+          <div class="product-card position-relative">
+            <div class="card-img">
+              <img src="{% static 'images/araxys-bio-harvester.webp'%}" alt="product-item" class="product-image img-fluid" style="height: 133px; width: 330px; box-shadow: 12px 12px 15px black;border-radius: 10px 10px 10px 10px;">
+            </div>
+            <div class="card-detail d-flex justify-content-between align-items-center mt-3">
+              <h3 class="card-title fs-6 fw-normal m-0" style="color:#FFF9CB ;">Running shoes for men
+              </h3>
+              <span class="card-price fw-bold" style="color: rgb(94, 15, 39);text-shadow: 2px 2px 4px rgba(255, 249, 203, 1);
+              ">$99</span>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4 mb-3">
+          <div class="product-card position-relative">
+            <div class="card-img">
+              <img src="{% static 'images/waveform-knife-skin-in-valorant.avif'%}" alt="product-item" class="product-image img-fluid" style="height: 133px; width: 330px; box-shadow: 12px 12px 15px black;border-radius: 10px 10px 10px 10px;">
+            </div>
+            <div class="card-detail d-flex justify-content-between align-items-center mt-3">
+              <h3 class="card-title fs-6 fw-normal m-0" style="color:#FFF9CB ;">Running shoes for men
+              </h3>
+              <span class="card-price fw-bold" style="color: rgb(94, 15, 39);text-shadow: 2px 2px 4px rgba(255, 249, 203, 1);
+              ">$99</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock container%}
+
+</html>

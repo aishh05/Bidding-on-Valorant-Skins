@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+{% block container %}
+
+<body>
+    
+    <div class="container">
+        <div class="login-container" style="max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            color: black;
+            background: #ccc8b0;
+             border-radius: 10px;
+            box-shadow: 4px 4px 15px black;">
+    <form action="{% url 'placeorder' %}" method="post">
+        {% csrf_token %}
+        <h3 style="color: rgb(94, 15, 39); text-align: center;">Details</h3>
+        <table align="center">
+            <tr>
+                <th>Name</th>
+                <td><input type="text" name="Name" required></td>
+            </tr>
+            <tr>
+                <th>Contact no</th>
+                <td><input type="text" name="Phoneno" required></td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td><input type="text" name="Address" required></td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td><input type="text" name="City" required></td>
+            </tr>
+            <tr>
+                <th>State</th>
+                <td><input type="text" name="State" required></td>
+            </tr>
+            <tr>
+                <th>Pincode</th>
+                <td><input type="text" name="Pincode" required></td>
+            </tr>
+            <tr>
+                <th>Total Price</th>
+                <td>
+                    <input type="text" name="tprice" value="{{tprice}}" readonly>
+                </td>
+            </tr>
+       
+        </table>
+        <div style="text-align: center; margin-top: 15px;">
+            <input type="submit" value="Place Order">
+        </div>
+    </form>
+        </div>
+
+
+{% endblock container %}

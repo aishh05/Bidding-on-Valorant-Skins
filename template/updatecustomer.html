@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+    {% load static %}
+<body>
+    {%block container%}
+    <div class="container">
+        <div class="login-container" style="max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            color: black;
+            background: #ccc8b0;
+             border-radius: 10px;
+            box-shadow: 4px 4px 15px black;">
+    <form action="{% url 'updatecustomer'%}" method="POST">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td><label>ID</label></td>
+                <td><input type="text" name="Id" value="{{ customer.cid }}" readonly></td>
+            </tr>
+            <tr>
+                <td><label>Name</label></td>
+                <td><input type="text" name="name" value="{{ customer.cname }}"></td>
+            </tr>
+            <tr>
+                <td><label>Contact no</label></td>
+                <td><input type="text" name="contact" value="{{ customer.c_customerno }}"></td>
+            </tr>
+            <tr>
+                <td><label>Email</label></td>
+                <td><input type="email" name="email" value="{{ customer.cemail }}"></td>
+            </tr>
+            <tr>
+                <td><label>Password</label></td>
+                <td><input type="text" name="password" value="{{ customer.cpassword }}"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="update" class="btn btn-primary" value="Submit" style="margin-top: 20px;"></td>
+            </tr>
+        </table>
+    </form>
+        </div>
+    {%endblock container%}
+</body>
+</html>

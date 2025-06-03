@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% block container %}
+
+<body>
+    <div class="container">
+        <div class="login-container" style="max-width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        color: black;
+        background: #ccc8b0;
+        border-radius: 10px;
+        box-shadow: 4px 4px 15px black;">
+            <form action="{% url 'addskin'%}" method="POST">
+                {% csrf_token %}
+                <table  style="margin: auto;">
+                    <tr>
+                        <td><label style="width: 80px; display: inline-block;">Name</label></td>
+                        <td><input type="text" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label style="width: 80px; display: inline-block;">Details</label></td>
+                        <td><input type="text" name="details"></td>
+                    </tr>
+                    <tr>
+                        <td><label style="width: 80px; display: inline-block;">Price</label></td>
+                        <td><input type="text" name="price"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="image">Add image:</label></td>
+                        <td><input type="file" id="image" name="image" accept="image/*"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Bidding Amount</label></td>
+                        <td><input type="number" name="bidamount"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Bid End Time</label></td>
+                        <td><input type="datetime-local" name="bid_end_time"></td> <!-- Custom bid end time -->
+                    </tr>
+                    <tr align="center">
+                        <td colspan="2"><input type="submit" value="Submit" class="btn btn-primary" value="Submit"
+                                style="margin-top: 20px;"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        </div>
+</body>
+{% endblock container %}

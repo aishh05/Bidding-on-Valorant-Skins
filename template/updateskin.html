@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+<body>
+    {% block container %}
+    <div class="container">
+        <div class="login-container" style="max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            color: black;
+            background: #ccc8b0;
+             border-radius: 10px;
+            box-shadow: 4px 4px 15px black;">
+            <form action="{% url 'updateskin'%}" method="POST">
+                {% csrf_token %}
+                <table>
+                    <tr>
+                        <td><label style="width: 100px;">ID</label></td>
+                        <td><input type="text" name="uid" value="{{ skin.sid }}"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Name</label></td>
+                        <td><input type="text" name="name" value="{{ skin.sname }}"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Details</label></td>
+                        <td><input type="text" name="details" value="{{ skin.sdetails }}"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Price</label></td>
+                        <td><input type="text" name="price" value="{{ skin.sprice }}"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="image">Add image:</label></td>
+                        <td><input type="file" id="image" name="image" value="{{skin.skin_image}}" accept="image/*">
+                        </td>
+                    </tr>
+                    <tr >
+                        <td colspan="2" style="text-align: center;"><input type="submit" value="Update" class="btn btn-primary" value="Submit" style="margin-top: 20px; align-content: center;"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        {% endblock container %}
+</body>
+
+</html>

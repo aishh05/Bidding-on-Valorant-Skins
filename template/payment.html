@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+{% block container %}
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var options = {
+                key: "rzp_test_hMxRvg0eMRWXhF", // Your Razorpay Key ID
+                amount: '{{orderobj.totalbill}}'*100, // Amount in paise (₹101.00)
+                currency: "INR",
+                name: "Pet Store",
+                handler: function (response) {
+                    console.log("success");
+                    console.log(response);
+                    // Redirect or handle success
+                    window.location.href = 'paymentsuccess?order_id={{orderobj.orderNo}}&payment_id=${response.razorpay_payment_id}&tbill={{orderobj.totalbill}}';
+                }
+            };
+
+            var rzp1 = new Razorpay(options);
+
+            // Ensure the button exists before adding the event listener
+            var payButton = document.getElementById("pay-btn");
+            if (payButton) {
+                payButton.onclick = function (e) {
+                    console.log("call");
+                    rzp1.open();
+                    e.preventDefault();
+                };
+            } else {
+                console.error("Pay button not found");
+            }
+        });
+    </script>
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-container" style="color: black !important; max-width: 400px; margin: 100px auto; padding: 20px; background: #ccc8b0;
+             border-radius: 20px; box-shadow: 4px 4px 15px black;">
+    
+            <table style="width: 100%; color: black;">
+                <tr>
+                    <th style="text-align: left;">Name</th>
+                    <td>{{orderobj.name}}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left;">Address</th>
+                    <td>{{orderobj.address}}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left;">State</th>
+                    <td>{{orderobj.state}}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left;">Pincode</th>
+                    <td>{{orderobj.pincode}}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left;">Phone No</th>
+                    <td>{{orderobj.phoneno}}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left;">Total Bill</th>
+                    <td>{{orderobj.totalbill}}</td>
+                </tr>
+            </table>
+    
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn btn-danger" id="pay-btn">Pay using Razor Pay</button>
+            </div>
+    
+        </div>
+    </div>
+    
+</body>
+{% endblock container %}
+
+
